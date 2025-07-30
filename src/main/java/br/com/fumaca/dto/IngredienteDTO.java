@@ -3,7 +3,7 @@ package br.com.fumaca.dto;
 import lombok.Data;
 
 @Data
-public class IngredienteCreateDTO {
+public class IngredienteDTO {
+    private Long id;
     private String nome;
 }
-
