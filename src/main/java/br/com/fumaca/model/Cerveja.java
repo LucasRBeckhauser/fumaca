@@ -1,12 +1,12 @@
 package br.com.fumaca.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -28,6 +28,8 @@ public class Cerveja extends  EntityId{
     @Enumerated(EnumType.STRING)
     private TipoCerveja tipo;
 
-
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "cerveja_id")
+    private List<Ingrediente> ingredientes;
 
 }
