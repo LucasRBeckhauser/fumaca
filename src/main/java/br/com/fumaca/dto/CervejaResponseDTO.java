@@ -6,14 +6,14 @@ import lombok.Data;
 import java.util.List;
 
     @Data
-    public class CervejaDTO {
+    public class CervejaResponseDTO {
         private Long id;
         private String nome;
         private String descricao;
-        private double teorAlcoolico;
-        private int amargor;
-        private int cor;
+        private String teorAlcoolico;
+        private String amargor;
+        private String cor;
         private TipoCerveja tipo;
-        private List<IngredienteDTO> ingredientesBasicos;
+        private List<String> ingredientes;
     }
 

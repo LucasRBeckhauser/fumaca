@@ -19,17 +19,15 @@ public class Cerveja extends  EntityId{
 
     private String descricao;
 
-    private double teorAlcoolico; // ABV
+    private String teorAlcoolico; // ABV
 
-    private int amargor; // IBU
+    private String amargor; // IBU
 
-    private int cor; // EBC
+    private String cor; // EBC
 
     @Enumerated(EnumType.STRING)
     private TipoCerveja tipo;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "cerveja_id")
-    private List<Ingrediente> ingredientes;
+    private String ingredientes;
 
 }
