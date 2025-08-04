@@ -1,37 +1,33 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Diretórios comuns de build
+/target/
+/build/
+
+# Logs
+*.log
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
+out/
 
 ### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 
 ### VS Code ###
 .vscode/
 
-
+### Arquivo de configuração sensível ###
 src/main/resources/application.properties
 
