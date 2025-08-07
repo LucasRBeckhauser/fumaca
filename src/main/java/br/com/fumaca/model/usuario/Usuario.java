@@ -1,16 +1,25 @@
 package br.com.fumaca.model.usuario;
 
-import br.com.fumaca.model.EntityId;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Set;
+import java.util.UUID;
 
 @Entity
 @Getter
 @Setter
-public class Usuario extends EntityId {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Usuario {
+
+    @Id
+    @GeneratedValue
+    @Column(columnDefinition = "uuid", updatable = false, nullable = false)
+    private UUID id;
 
     private String nome;
     private String email;
@@ -19,5 +28,6 @@ public class Usuario extends EntityId {
     @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
-
 }
+
+

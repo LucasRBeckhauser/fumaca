@@ -28,4 +28,12 @@ public class UsuarioResponseDTO {
 
     @Schema(description = "Lista de papéis (roles) atribuídos ao usuário", example = "[\"ROLE_ADMIN\", \"ROLE_CLIENTE\"]")
     private Set<Role> roles;
+
+    public UsuarioResponseDTO(UUID id, String nome, String email, Set<Role> roles) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.roles = roles;
+    }
+
 }

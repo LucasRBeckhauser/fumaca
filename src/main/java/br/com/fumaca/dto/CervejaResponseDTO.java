@@ -5,7 +5,8 @@ import lombok.Data;
 
 import java.util.List;
 
-    @Data
+
+@Data
     public class CervejaResponseDTO {
         private Long id;
         private String nome;
@@ -16,4 +17,5 @@ import java.util.List;
         private TipoCerveja tipo;
         private List<String> ingredientes;
     }
+
 
