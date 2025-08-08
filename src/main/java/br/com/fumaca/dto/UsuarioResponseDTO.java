@@ -2,7 +2,6 @@ package br.com.fumaca.dto;
 
 import br.com.fumaca.model.usuario.Role;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,7 +12,6 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Schema(description = "Dados retornados sobre um usuário")
 public class UsuarioResponseDTO {
 

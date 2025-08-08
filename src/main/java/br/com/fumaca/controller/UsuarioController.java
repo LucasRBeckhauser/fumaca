@@ -17,7 +17,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/usuarios")
 @RequiredArgsConstructor
-public class UsuarioController {
+public class UsuarioController extends AbstractController{
 
     private final UsuarioService usuarioService;
 
