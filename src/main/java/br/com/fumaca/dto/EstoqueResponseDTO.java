@@ -2,7 +2,6 @@ package br.com.fumaca.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -13,33 +12,33 @@ import java.time.LocalDate;
 @Builder
 public class EstoqueResponseDTO {
 
-    @Schema(description = "ID do lote no estoque", example = "1")
+    @Schema(description = "ID do registro de estoque", example = "1")
     private Long id;
 
-    @Schema(description = "ID da cerveja associada", example = "1")
-    private Long cervejaId;
+    @Schema(description = "Nome da cerveja", example = "IPA Artesanal")
+    private String cervejaNome;
 
-    @Schema(description = "Nome da cerveja", example = "Weissbier")
-    private String nomeCerveja;
-
-    @Schema(description = "Quantidade atual no lote", example = "100")
+    @Schema(description = "Quantidade total do lote", example = "100")
     private Integer quantidadeLote;
 
-    @Schema(description = "Quantidade inicial do lote", example = "100")
-    private Integer quantidadeInicial;
+    @Schema(description = "Quantidade atual disponível", example = "90")
+    private Integer quantidadeAtual;
 
-    @Schema(description = "Data de entrada do lote no estoque", example = "2025-08-08")
+    @Schema(description = "Data de entrada", example = "2025-08-10")
     private LocalDate dataEntrada;
 
-    @Schema(description = "Data de validade do lote", example = "2025-12-31")
+    @Schema(description = "Data de validade", example = "2025-12-31")
     private LocalDate dataValidade;
 
-    @Schema(description = "Nome do fornecedor do lote", example = "Fornecedor XPTO")
+    @Schema(description = "Fornecedor", example = "Cervejaria Artesanal")
     private String fornecedor;
 
-    @Schema(description = "Preço de custo unitário do lote", example = "8.50")
+    @Schema(description = "Preço de custo unitário", example = "8.50")
     private BigDecimal precoCusto;
 
-    @Schema(description = "Observações internas sobre o lote", example = "Lote com desconto especial")
+    @Schema(description = "Observações", example = "Lote promocional")
     private String observacoes;
+
+    private Integer quantidadeSaida;
+
 }
