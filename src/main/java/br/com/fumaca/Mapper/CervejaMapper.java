@@ -15,8 +15,8 @@ import java.util.stream.Collectors;
 public interface CervejaMapper {
 
     @Mapping(target = "ingredientes", expression = "java(splitIngredientes(entity.getIngredientes()))")
-    @Mapping(target = "cervejariaId", source = "entity.cervejaria.id")
-    @Mapping(target = "cervejariaNome", source = "entity.cervejaria.nomeFantasia")
+    @Mapping(target = "cervejariaId", source = "cervejaria.id")
+    @Mapping(target = "cervejariaNome", source = "cervejaria.nomeFantasia")
     CervejaResponseDTO toDTO(Cerveja entity);
 
     @Mapping(target = "cervejaria", ignore = true) // Será setado manualmente no service

@@ -7,7 +7,7 @@ import br.com.fumaca.model.Cerveja;
 import br.com.fumaca.model.Cervejaria;
 import br.com.fumaca.repository.CervejaRepository;
 import br.com.fumaca.enterprise.CustomValidationException;
-import br.com.fumaca.repository.UsuarioRepository;
+import br.com.fumaca.repository.CervejariaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class CervejaService {
     private CervejaRepository cervejaRepository;
 
     @Autowired
-    private UsuarioRepository.CervejariaRepository cervejariaRepository;
+    private CervejariaRepository cervejariaRepository;
 
     @Autowired
     private CervejaMapper cervejaMapper;
