@@ -2,11 +2,14 @@ package br.com.fumaca.dto;
 
 import br.com.fumaca.model.TipoCerveja;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 @Data
+
 public class CervejaRequestDTO {
     private String nome;
     private String descricao;
