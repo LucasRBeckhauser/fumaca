@@ -13,7 +13,7 @@ public class PedidoRequestDTO {
     private List<ItemPedidoRequestDTO> itens;
 
     private String cep;
-    private String rua;
+    private String logradouro;
     private String numero;
     private String complemento;
     private String bairro;
